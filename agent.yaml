@@ -1,0 +1,11 @@
+spec_version: "0.1.0"
+name: api-deprecation-consumer-impact-auditor
+version: 0.1.0
+description: Map declared API consumers to a proposed deprecation and verify migration evidence.
+skills:
+  - api-deprecation-consumer-impact-auditor-skill
+tools:
+  - review-api-deprecation-consumer-impact-auditor
+tags:
+  - developer-tools
+  - evidence-driven

@@ -1,0 +1,29 @@
+{
+  "slug": "api-deprecation-consumer-impact-auditor",
+  "title": "API Deprecation Consumer Impact Auditor",
+  "category": "developer-tools",
+  "description": "Map declared API consumers to a proposed deprecation and verify migration evidence.",
+  "fields": {
+    "api_version": {
+      "label": "api version",
+      "kind": "required",
+      "minimum": 0
+    },
+    "consumers": {
+      "label": "consumers",
+      "kind": "list",
+      "minimum": 1
+    },
+    "migration_status": {
+      "label": "migration status",
+      "kind": "list",
+      "minimum": 1
+    },
+    "sunset_date": {
+      "label": "sunset date",
+      "kind": "date",
+      "minimum": 0
+    }
+  },
+  "limitations": "Uses caller-provided evidence only; cannot confirm external facts. Human review remains required."
+}

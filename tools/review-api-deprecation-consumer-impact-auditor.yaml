@@ -1,0 +1,59 @@
+{
+  "name": "review-api-deprecation-consumer-impact-auditor",
+  "description": "Run API Deprecation Consumer Impact Auditor",
+  "version": "0.1.0",
+  "input_schema": {
+    "type": "object",
+    "properties": {
+      "payload": {
+        "type": "object",
+        "properties": {
+          "api_version": {
+            "type": "string",
+            "description": "api version"
+          },
+          "consumers": {
+            "type": "array",
+            "description": "consumers"
+          },
+          "migration_status": {
+            "type": "array",
+            "description": "migration status"
+          },
+          "sunset_date": {
+            "type": "string",
+            "description": "sunset date"
+          }
+        },
+        "required": [
+          "api_version",
+          "consumers",
+          "migration_status",
+          "sunset_date"
+        ]
+      }
+    },
+    "required": [
+      "payload"
+    ]
+  },
+  "output_schema": {
+    "type": "object",
+    "properties": {
+      "status": {
+        "type": "string"
+      },
+      "score": {
+        "type": "object"
+      },
+      "findings": {
+        "type": "array"
+      }
+    }
+  },
+  "implementation": {
+    "type": "script",
+    "path": "review-api-deprecation-consumer-impact-auditor.py",
+    "runtime": "python3"
+  }
+}

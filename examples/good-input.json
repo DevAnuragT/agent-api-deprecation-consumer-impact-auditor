@@ -1,0 +1,10 @@
+{
+  "api_version": "evidence-record",
+  "consumers": [
+    "record-1"
+  ],
+  "migration_status": [
+    "record-1"
+  ],
+  "sunset_date": "2026-10-03"
+}
